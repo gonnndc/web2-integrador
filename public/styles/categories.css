@@ -1,0 +1,30 @@
+
+.wrapper-categories{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10;
+}
+
+.wrapper-categories .btn-category-style{
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0px;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.wrapper-categories .btn-category-style:hover{
+    background-color: #fdc49e;
+}
+
+.active {
+    background-color: #ccc;
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .grid-container
+    each product in products
+      .product-card
+        if product.withOffer == 1
+          .cinta-oferta 
+            p #{Math.round(product.offerPercentaje)}% OFF 
+            p - $ #{product.discountedAmount}
+        .container
+          img(src=product.image, alt=product.title)
+          h4= product.title
+        .container-text
+          p.description= product.description
+          .container-price-cta
+            .prices
+              if product.withOffer == 1
+                p.previous-price $ #{product.price}
+                p.price $ #{product.priceWithDiscount}
+              else
+                p.price $ #{product.price}
+            button.cta-btn(data-product-id=product.id, data-product-title=product.title, data-product-description=product.description, data-product-price=product.priceWithDiscount, data-product-img=product.image) Agregar al carrito

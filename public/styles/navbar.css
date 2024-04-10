@@ -1,0 +1,63 @@
+.wrapper-nav{
+    background-color: #facc97;
+    width: 100%;
+    height: 120px;
+}
+
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.logo img{
+    width: 50px;
+}
+
+.carrito-notification{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+}
+
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e2c050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    right: -15px
+}
+
+
+h1 a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container-wave{
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+

@@ -1,0 +1,30 @@
+html
+  head
+    title Ecommerce
+    link(rel='stylesheet', href='/styles/products.css')
+    link(rel='stylesheet', href='/styles/layout.css')
+    link(rel='stylesheet', href='/styles/navbar.css')
+    link(rel='stylesheet', href='/styles/footer.css')
+    link(rel='stylesheet', href='/styles/not-found.css')
+    link(rel='stylesheet', href='/styles/categories.css')
+    link(rel='stylesheet', href='/styles/cart.css')
+
+  body
+    include components/navbar
+    .wrapper
+        .data-cart
+            h1 Checkout
+            .products-totalprices
+              ul#list-products-cart
+              .totalprices
+        .contenedor
+          a.boton-flotante(type="button", onclick="scrollToTop()")
+            | Top
+            span.icono-flecha
+    include components/footer
+    
+    script(src="/js/layout.js")
+    script(src="/js/cart.js")    
+
+       
+        

@@ -1,0 +1,28 @@
+html
+  head
+    title Ecommerce
+    link(rel='stylesheet', href='/styles/products.css')
+    link(rel='stylesheet', href='/styles/layout.css')
+    link(rel='stylesheet', href='/styles/navbar.css')
+    link(rel='stylesheet', href='/styles/footer.css')
+    link(rel='stylesheet', href='/styles/not-found.css')
+    link(rel='stylesheet', href='/styles/categories.css')
+
+  body
+    include components/navbar
+    include components/categories
+    .wrapper
+        .contenedor
+          a.boton-flotante(type="button", onclick="scrollToTop()")
+            | Top
+            span.icono-flecha
+          block content
+    include components/footer
+
+    script(src="/js/categories.js")
+    script(src="/js/layout.js") 
+    script(src="/js/products.js")    
+       
+        
+
+        

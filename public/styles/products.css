@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.title{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* 4 columnas en la grilla */
+    gap: 20px;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20 10 30 10
+  }
+  
+  .product-card {
+    padding: 20px;
+    border-radius: 20px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.4);
+    background-color: rgb(255, 255, 255);
+  }
+
+
+
+  .cinta-oferta{
+    width: 300px;
+    height: 60px;
+    background-color: rgb(252, 67, 67);
+    transform: rotate(40grad);
+    position: absolute;
+    top: 20;
+    right: -80;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cinta-oferta p{
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: 230px;
+    object-fit: contain;
+  }
+  
+  .product-card h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .product-card p {
+    margin: 5px 0;
+  }
+
+
+  .product-card p.description {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 10px;
+  }
+
+
+  .product-card .container-text:hover {
+    height: auto;
+    min-height:200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 0px;
+    border-radius: 20px;
+    left: 0px;
+    z-index: 1000;
+    background-color: #e9e9e9;
+    padding: 20;
+    overflow: auto;
+  }
+
+  .product-card .container-text:hover p.description{
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    font-size: 13px; 
+    font-weight: 500;
+  }
+
+
+
+  .product-card .container-text:hover .cta-btn{
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .container-price-cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .prices{
+    font-size: 25px;
+  }
+
+  
+  .previusprice-discountedamount{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    font-size: 12px;
+  }
+
+
+  .previous-price{
+    text-decoration:line-through;
+    color: #f15e5e;
+    
+  }
+
+  .discountedamount{
+    color: #f15e5e;
+  }
+
+
+  .cta-btn{
+    padding: 10;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
