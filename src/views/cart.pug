@@ -5,7 +5,6 @@ html
     link(rel='stylesheet', href='/styles/layout.css')
     link(rel='stylesheet', href='/styles/navbar.css')
     link(rel='stylesheet', href='/styles/footer.css')
-    link(rel='stylesheet', href='/styles/not-found.css')
     link(rel='stylesheet', href='/styles/categories.css')
     link(rel='stylesheet', href='/styles/cart.css')
 
@@ -14,15 +13,22 @@ html
     .wrapper
         .data-cart
             h1 Checkout
-            .products-totalprices
-              ul#list-products-cart
-              .totalprices
+            .container-cart
+              .products-totalprices
+                ul#list-products-cart
+                .totalprices
+                button#btn_clean_products.cta-btn Limpiar carro
+              .total-info
+                #quantity
+                #price
+                button.cta-btn Comprar
         .contenedor
           a.boton-flotante(type="button", onclick="scrollToTop()")
             | Top
             span.icono-flecha
     include components/footer
     
+    script(src="/js/products.js")
     script(src="/js/layout.js")
     script(src="/js/cart.js")    
 

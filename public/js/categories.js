@@ -36,5 +36,5 @@ function highlightActiveButton(category) {
     }
 }
 
-// // Resaltar el botón correspondiente al valor guardado al cargar la página
+// Resaltar el botón correspondiente al valor guardado al cargar la página
 highlightActiveButton(categoryClicked);

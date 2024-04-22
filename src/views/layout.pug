@@ -10,7 +10,6 @@ html
 
   body
     include components/navbar
-    include components/categories
     .wrapper
         .contenedor
           a.boton-flotante(type="button", onclick="scrollToTop()")
@@ -18,11 +17,10 @@ html
             span.icono-flecha
           block content
     include components/footer
-
+    script(src="/js/navbar.js")
     script(src="/js/categories.js")
     script(src="/js/layout.js") 
     script(src="/js/products.js")    
-       
         
 
         

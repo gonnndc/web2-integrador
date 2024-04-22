@@ -1,5 +1,7 @@
 export function joinCategories(products){
     const categories = []
+    if(!products) return
+    
     products.forEach(p => {
             if(!categories.includes(capitalizeFirstLetter(p.category))){
                 categories.push(capitalizeFirstLetter(p.category))

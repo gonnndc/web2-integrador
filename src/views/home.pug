@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .grid-container
+    each product in productsTopRating
+      .product-card
+        if product.withOffer == 1
+          .cinta-oferta 
+            p #{Math.round(product.offerPercentaje)}% OFF 
+            p - $ #{product.discountedAmount}
+        .container
+          img(src=product.image, alt=product.title)
+          h4= product.title
+        .container-text
+          p.description= product.description
+
+

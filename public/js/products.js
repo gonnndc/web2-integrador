@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const btnsAgregarCarrito = document.querySelectorAll('.cta-btn');
     const cartQuantity = document.querySelector('.circle')
+
     refreshQuantityCar(cartQuantity);
+
 
     btnsAgregarCarrito.forEach(btn => {
         let cart = JSON.parse(localStorage.getItem('productsAddedToCart')) || []
@@ -35,9 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 cart.push(product);
             }
             
-            refreshQuantityCar(cartQuantity)
 
             localStorage.setItem('productsAddedToCart', JSON.stringify(cart));
+            refreshQuantityCar(cartQuantity)
+
         });
     });
 });
@@ -45,5 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function refreshQuantityCar(cartQuantity) {
     let cart = JSON.parse(localStorage.getItem('productsAddedToCart')) || [];
     const totalQuantity = cart.reduce((acc, curr) => acc + curr.productQuantity, 0);
-    cartQuantity.textContent = totalQuantity;
+    cartQuantity.textContent = totalQuantity
+    const ancorCart = document.querySelector('.carrito-notification a')
+    if(totalQuantity < 1){
+        ancorCart.href = ''
+        return
+    }
+    ancorCart.href = '/cart'
 }
