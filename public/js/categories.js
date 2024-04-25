@@ -4,16 +4,16 @@ const categoryClicked = localStorage.getItem('category-clicked');
 
 btnsCategories.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        window.location.href = `http://localhost:3000/products/category/${btn.textContent}`;
-        fetch(`http://localhost:3000/products/category/${e.target.value}`);
+        window.location.href = `https://web2-integrador-czw6.onrender.com/products/category/${btn.textContent}`;
+        fetch(`https://web2-integrador-czw6.onrender.com/products/category/${e.target.value}`);
         localStorage.setItem('category-clicked', btn.textContent)
         highlightActiveButton(btn.textContent);
     });
 });
 
 btnTodos.addEventListener('click', () => {
-    window.location.href = 'http://localhost:3000/products';
-    fetch(`http://localhost:3000/products`);
+    window.location.href = 'https://web2-integrador-czw6.onrender.com/products';
+    fetch(`https://web2-integrador-czw6.onrender.com/products`);
     localStorage.setItem('category-clicked', "Todos")
     highlightActiveButton('Todos'); // Resaltar el botón "Todos" después de hacer clic
 });

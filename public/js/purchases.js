@@ -3,7 +3,7 @@ const btnComprar = document.querySelector('#btn-comprar')
 
 
 btnComprar.addEventListener('click', ()=>{
-    fetch('http://localhost:3000/purchases', {
+    fetch('https://web2-integrador-czw6.onrender.com/purchases', {
         method:'POST',
         headers: {
             'Content-Type': 'application/json' // Tipo de contenido JSON
@@ -24,13 +24,12 @@ function abrirModal() {
   const modal = document.getElementById('miModal');
   modal.style.display = 'block';
 
-  // Temporizador para cerrar el modal después de 3 segundos
   setTimeout(() => {
     modal.style.display = 'none';
-    window.location.href = 'http://localhost:3000/products';
-    fetch(`http://localhost:3000/products`);
+    window.location.href = 'https://web2-integrador-czw6.onrender.com/products';
+    fetch(`https://web2-integrador-czw6.onrender.com/products`);
     localStorage.clear()
-  }, 3000);
+  }, 2500);
 }
 
 

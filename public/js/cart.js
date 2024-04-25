@@ -10,8 +10,8 @@ if (Array.isArray(datosLocalStorage) && datosLocalStorage.length > 0) {
     btnCleanProducts.addEventListener('click', (e) => {
         const cartQuantity = document.querySelector('.circle')
         cartQuantity.textContent = 0;
-        window.location.href = 'http://localhost:3000/products';
-        fetch(`http://localhost:3000/products`);
+        window.location.href = 'https://web2-integrador-czw6.onrender.com/products';
+        fetch(`https://web2-integrador-czw6.onrender.com/products`);
         localStorage.clear()
     })
     datosLocalStorage.forEach(prod => {
