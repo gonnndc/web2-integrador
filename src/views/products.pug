@@ -21,4 +21,4 @@ block content
                 p.price $ #{product.priceWithDiscount}
               else
                 p.price $ #{product.price}
-            button.cta-btn(data-product-id=product.id, data-product-title=product.title, data-product-description=product.description, data-product-price=product.priceWithDiscount, data-product-img=product.image) Agregar al carrito
+            button.cta-btn#btn-agregar-carrito(data-product-id=product.id, data-product-title=product.title, data-product-description=product.description, data-product-price=product.priceWithDiscount, data-product-img=product.image) Agregar al carrito

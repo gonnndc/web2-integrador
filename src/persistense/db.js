@@ -19,14 +19,15 @@ export async function createDatebaseAndInsertProducts(products) {
     CREATE TABLE IF NOT EXISTS purchase (
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         updated TIME NOT NULL,
-        created TIME NOT NULL
+        created TIME NOT NULL,
+        total_amount INTEGER NOT NULL
     );
 
     CREATE TABLE IF NOT EXISTS purchase_product (
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         product_id INTEGER REFERENCES product(id),
         purchase_id INTEGER REFERENCES purchase(id),
-        quantity INTEGER NOT NULL
+        quantity_product INTEGER NOT NULL
     );
 
 

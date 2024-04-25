@@ -1,17 +1,33 @@
 extends layout
 
 block content
-  .grid-container
-    each product in productsTopRating
-      .product-card
-        if product.withOffer == 1
-          .cinta-oferta 
-            p #{Math.round(product.offerPercentaje)}% OFF 
-            p - $ #{product.discountedAmount}
-        .container
-          img(src=product.image, alt=product.title)
-          h4= product.title
-        .container-text
-          p.description= product.description
+  header.hero-section
+    .wrapper-hero-section
+      .content
+          p.sub-heading Encontrá todo lo que buscas
+          a(href="/products") Ver mas
+
+
+  .bg-section-toprating
+    .wrapper-top-rating
+      h2#title-products-toprating Productos mas elegidos
+      .grid-container
+        each product in productsTopRating
+          .product-card
+            if product.withOffer == 1
+              .cinta-oferta 
+                p #{Math.round(product.offerPercentaje)}% OFF 
+                p - $ #{product.discountedAmount}
+            .container
+              img(src=product.image, alt=product.title)
+              h4#title-product-home= product.title
+            .container-info-home
+              .container-rating
+                img(src="/media/estrella.png", alt="rating del producto")    
+                span #{product.rating}
+              a(href="/products") 
+                button.btn-more-products VER MAS PRODUCTOS  
+            
+
 
 

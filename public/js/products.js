@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btnsAgregarCarrito = document.querySelectorAll('.cta-btn');
+    const btnsAgregarCarrito = document.querySelectorAll('#btn-agregar-carrito');
     const cartQuantity = document.querySelector('.circle')
 
     refreshQuantityCar(cartQuantity);

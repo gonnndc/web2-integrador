@@ -16,7 +16,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
 
 const app = express();
+const port = process.env.PORT || 3000
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // View engine
@@ -29,7 +32,7 @@ app.use('/cart', cartRouter);
 app.use('/purchases', purchasesRouter);
 
 
-app.listen(3000, async function(){
+app.listen(port, async function(){
   try {
       fs.access('./index.db', fs.constants.F_OK, (err) => {
           if (err) {
@@ -50,5 +53,5 @@ app.listen(3000, async function(){
 
   const {products} = await fetchAndTransformProductsCategories()
   createDatebaseAndInsertProducts(products)
-  console.log(`Server started on http://localhost:3000/products`);
+  console.log(`Server started on http://localhost:${port}/`);
 })

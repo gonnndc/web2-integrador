@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    .wrapper-purchases-allpage
+        h1#title-purchases-historial Historial de compras
+        .wrapper-purchases-historial
+            if purchasesHistory.length > 0
+                each purchase in purchasesHistory.reverse()
+                    .toggle-details
+                        span
+                            b Compra Nro. #{purchase.purchase_id }
+                        span #{purchase.purchase_created} 
+                        span
+                            b $ #{purchase.purchase_total_amount}
+                        span.arrow-icon ▶
+                    .wrapper-products-purchase
+                        each item in purchase.productos
+                            .wrapper-item
+                                .item
+                                    img(src=item.product_image, alt=item.product_title)
+                                .item-details
+                                    h3=item.product_title
+                                    p Precio: $ #{item.product_price_with_discount} unitario
+                                    p Fecha de compra: #{item.purchase_created}
+                                    p Cantidad comprada: #{item.purchase_product_quantity}
+            else 
+                p.not-found-purchases No cuenta con historial de compras

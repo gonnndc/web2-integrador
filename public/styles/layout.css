@@ -1,15 +1,18 @@
 .wrapper{
-    background-color: rgb(255, 173, 106);
+    background-color: rgb(255, 229, 159);
     margin: 0 auto;
 }
 
 .contenedor{
     min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
   .boton-flotante {
     position: fixed;
+    z-index: 1000;
     width: 80px;
     height: 80px;
     border-radius: 50%;

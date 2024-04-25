@@ -7,6 +7,8 @@ html
     link(rel='stylesheet', href='/styles/footer.css')
     link(rel='stylesheet', href='/styles/categories.css')
     link(rel='stylesheet', href='/styles/cart.css')
+    link(rel='stylesheet', href='/styles/purchases.css')
+
 
   body
     include components/navbar
@@ -21,16 +23,27 @@ html
               .total-info
                 #quantity
                 #price
-                button.cta-btn Comprar
+                button.cta-btn#btn-comprar Comprar
+                  
         .contenedor
           a.boton-flotante(type="button", onclick="scrollToTop()")
             | Top
             span.icono-flecha
+
+    #miModal.modal
+      .modal-contenido
+        <p>¡Compra realizada con éxito!</p>
+      </div>
+    </div>
     include components/footer
     
     script(src="/js/products.js")
     script(src="/js/layout.js")
-    script(src="/js/cart.js")    
+    script(src="/js/cart.js")
+    script(src="/js/purchases.js")
+    script(src="/js/historial.js")    
+    
+    
 
        
         

@@ -1,10 +1,10 @@
 import { Router } from 'express';
 const router = Router();
 
-//import Product, { findById, update, remove } from '../models/productModel.js';
-import { savePurchase } from '../controllers/purchasesController.js';
+import { savePurchase, historialPurchases } from '../controllers/purchasesController.js';
 
 router.post('/', savePurchase);
+router.get('/history', historialPurchases)
 
 
 export default router;

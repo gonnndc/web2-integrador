@@ -23,6 +23,7 @@
     padding: 20 10 30 10
   }
   
+  
   .product-card {
     padding: 20px;
     border-radius: 20px;
@@ -32,7 +33,7 @@
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
     background-color: rgb(255, 255, 255);
   }
 
@@ -41,7 +42,7 @@
   .cinta-oferta{
     width: 300px;
     height: 60px;
-    background-color: rgb(252, 67, 67);
+    background-color: #f15e5e;;
     transform: rotate(40grad);
     position: absolute;
     top: 20;
